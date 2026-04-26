@@ -69,12 +69,21 @@ erDiagram
         datetime createdAt
     }
 
+    REPLY {
+        string id PK
+        string postId FK
+        string authorId FK
+        string content
+        datetime createdAt
+    }
+
     USER ||--o{ ARTWORK : "creates"
     USER ||--o{ COMMISSION : "requests as customer"
     USER ||--o{ COMMISSION : "fulfills as artist"
     USER ||--o{ MESSAGE : "sends"
     USER ||--o{ FORUM_POST : "authors"
+    USER ||--o{ REPLY : "writes"
     COMMISSION ||--o{ MESSAGE : "contains"
     COMMISSION ||--o{ TRANSACTION : "generates"
     COMMISSION ||--o| ARTWORK : "produces"
-    FORUM_POST ||--o{ FORUM_POST : "has replies"
+    FORUM_POST ||--o{ REPLY : "has replies"
