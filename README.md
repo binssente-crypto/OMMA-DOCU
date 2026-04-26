@@ -1,5 +1,6 @@
 # OMMA
 
+```mermaid
 erDiagram
     USER {
         string id PK
@@ -65,3 +66,4 @@ erDiagram
     COMMISSION ||--o{ TRANSACTION : "generates"
     COMMISSION ||--o{ ARTWORK : "produces"
     FORUM_POST ||--o{ FORUM_POST : "replies to"
+```
