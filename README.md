@@ -1,5 +1,3 @@
-# OMMA
-
 ```mermaid
 erDiagram
     USER {
@@ -65,5 +63,4 @@ erDiagram
     COMMISSION ||--o{ MESSAGE : "has"
     COMMISSION ||--o{ TRANSACTION : "generates"
     COMMISSION ||--o{ ARTWORK : "produces"
-    FORUM_POST ||--o{ FORUM_POST : "replies to"
 ```
